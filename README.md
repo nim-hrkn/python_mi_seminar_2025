@@ -3,14 +3,14 @@
 
 このレポジトリには
 ２０２３年度マテリアルズ・インフォマティクス連続セミナー 第二版
-のJupyter notebook/Lab スクリプトおよびデータが含まれます．
-
+のJupyter notebook/Lab スクリプトおよびデータが含まれます。
 Python/scikit-learnを用いた機械学習手法の紹介を行います。
 
-参考：
-「Pythonではじめるマテリアルズインフォマティクス」
-木野 日織，ダム ヒョウ チ（著）近代科学社Digital
+## 対象
 
+- Pythonを使いたい人 → この連続セミナー
+
+- Pythonを使わずにGUIソフトを使いたい人 → Orange Data Miningを用いた連続セミナー（下で紹介）。OrangeのGUIとscikit-learnライブラリは対応していることが多いので、Orange Data Miningから将来はPythonへのステップアップも可能でしょう。
 
 ## スライド及び動画
 
@@ -18,9 +18,13 @@ Python/scikit-learnを用いた機械学習手法の紹介を行います。
 
 ２０２３年度マテリアルズ・インフォマティクス連続セミナーを一部改定して作成しています。そのため一部スライドの年号や回数が修正されておりません。また、呼び方が「連続セミナー」、「チュートリアル」と混乱しています。ご了承ください。
 
-### 基礎編
+### 座学編
 
 - 座学：https://www.docswell.com/s/3465680103/ZWPN45-2022-12-07-091431, https://youtu.be/WkStbYrGCM4
+
+座学は下で紹介している「Orange Dataminingを用いた機械学習手法チュートリアル」の一部も参照できます。
+
+## 基礎編
 
 - （追加）最低限のPython package紹介,データ紹介,LLMによる知識獲得：https://www.docswell.com/s/3465680103/ZJLP43-2024-01-22-142423, https://youtu.be/Oz8hED87qiQ
 - （改定）回帰、交差検定、LLMによるソースコード作成：https://www.docswell.com/s/3465680103/Z4Q1VD-2024-01-22-142634, https://youtu.be/3e698MCBlng
@@ -36,6 +40,14 @@ https://www.docswell.com/s/3465680103/K3R1V5-2023-01-09-214658, https://youtu.be
 - 説明変数重要性、全探索を用いた説明変数重要性：https://www.docswell.com/s/3465680103/ZMJJ9Z-2023-01-16-123943, https://youtu.be/afg_2sIG3O8
 - ベイズ最適化、推薦システム：https://www.docswell.com/s/3465680103/5YY1D5-2023-01-23-142130, https://youtu.be/bE-kfA_Z3z0
 
+
+## Orange Data Miningを用いた機械学習手法チュートリアル
+
+Pythonを用いないワークフローによる機械学習手法適用ソフトOrange Data Miningを用いた機械学習手法チュートリアル
+
+https://bitbucket.org/kino_h/orange_mi_seminar_2023/src/main/
+
+
 ## 補足資料
 - bitbucket repositoryのダウンロードの仕方： https://youtu.be/xkgHmyenjC4 .
 - Jupyter labの使い方： https://youtu.be/WIw_xR6zFjs .
@@ -44,10 +56,25 @@ https://www.docswell.com/s/3465680103/K3R1V5-2023-01-09-214658, https://youtu.be
 - 第五回の質問への解答: https://www.docswell.com/s/3465680103/Z1P1GK-2023-01-18-152055 .
 - 日本のAI戦略：セミナーの位置づけ、他の勉強ソース： https://www.docswell.com/s/3465680103/ZNW8DZ-2022-12-07-172019 .
 
-# UPDATES due to the obsolte functions in scikit-learn
+# UPDATES 
 
 ## Dec. 21, 2022
-- sns.kdeplot(array1, array2, ...) -> sns.kdeplot(x=array1, y=array2, ...)
+- sns.kdeplot(array1, array2, ...) -> sns.kdeplot(x=array1, y=array2, ...)、due to the obsolte functions in scikit-learn
+
+## Jan. 22, 2023
+- 基礎編の３つを追加、改定。
+
+## 免責事項
+本セミナーのスクリプトやデータを用いて得られた結果について一切の責任を持ちません。
+
+
+## 参考書籍
+
+- 「Pythonではじめるマテリアルズインフォマティクス」
+木野 日織，ダム ヒョウ チ（著）近代科学社Digital、ISBN:9784764960466
+
+- 「Orange Data Mining ではじめるマテリアルズインフォマティクス」⽊野 ⽇織、ダム ヒョウ チ(著) 近代科学社、ISBN:9784764906310
+
 
 # LICENSE
 
