@@ -11,6 +11,9 @@ dist/
 *.class
 
 # Compiled Python bytecode
+script/
+.ipynb_checkpoints/
+__pycache__/
 *.py[cod]
 
 # Log files
