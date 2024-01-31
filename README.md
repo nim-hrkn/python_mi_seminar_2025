@@ -2,18 +2,15 @@
 # CONTENT
 
 このレポジトリには
-２０２３年度マテリアルズ・インフォマティクス連続セミナー 第二版
+２０２３年度マテリアルズ・インフォマティクス連続ハンズオン 第二版
 のJupyter notebook/Lab スクリプトおよびデータが含まれます。
 Python/scikit-learnを用いた機械学習手法の紹介を行います。
 
 本スクリプトはscikt-learn 1.3.2, scipy 1.11.3で動作確認をしています。
-
+パッケージの仕様は変わっていくので、全ての場合に動作確認はできません。
+ご了承ください。
 
 ##  対象
-
-
-
-
 
 ### 想定受講者
 
@@ -33,7 +30,8 @@ Python/scikit-learnを用いた機械学習手法の紹介を行います。
 
 スライド及び動画は以下のurlにあります。
 
-２０２２年度マテリアルズ・インフォマティクス連続セミナーを一部改定して作成しています。そのため一部スライドの年号や回数が修正されておりません。また、呼び方が「連続セミナー」、「チュートリアル」と混乱しています。ご了承ください。
+２０２２年度マテリアルズ・インフォマティクス連続セミナーを一部改定して作成しています。そのため一部スライドの年号や回数が修正されておりません。また、呼び方が「連続セミナー」、「チュートリアル」,
+「ハンズオン」と混乱しています。ご了承ください。
 
 ### 座学編
 
@@ -67,6 +65,23 @@ https://www.docswell.com/s/3465680103/K3R1V5-2023-01-09-214658, https://youtu.be
 - ベイズ最適化、推薦システム：https://www.docswell.com/s/3465680103/5YY1D5-2023-01-23-142130, https://youtu.be/bE-kfA_Z3z0
 
 
+## 実行環境の構築と実行
+
+### 実行環境の構築
+
+各自のPCでスクリプトを動作Python3環境下でのjupyter lab, scikit-learnなどのパッケージのインストールをお願いします。
+
+例えばAnaconda Distributionにより使用するPython環境一式をインストールできます。​
+https://www.anaconda.com/download​
+
+Anaconda DistributionのFree Plan適用条件に関してはこちらに記載があります。
+https://legal.anaconda.com/policies/en/?name=terms-of-service
+
+### jupyter Labの使い方
+
+jupyter Labの簡単な使い方の説明はこちらにあります。
+https://youtu.be/WIw_xR6zFjs
+
 ## Orange Data Miningを用いた機械学習手法チュートリアル
 
 Pythonを用いないワークフローによる機械学習手法適用ソフトOrange Data Miningを用いた機械学習手法チュートリアル
@@ -89,7 +104,6 @@ https://bitbucket.org/kino_h/orange_mi_seminar_2023/src/main/
 
 ## Jan. 22, 2023
 - 基礎編の３つを追加、改定。
-
 
 # 参考書籍
 
