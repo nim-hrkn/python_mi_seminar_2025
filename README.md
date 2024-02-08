@@ -47,7 +47,7 @@ Python/scikit-learnを用いた機械学習手法の紹介を行います。
 目的２：大scikit-learnライブラリの使用支援・コード作成支援のための規模言語モデルの使い方を知る。
 
 - （追加）最低限のPython package紹介,データ紹介,LLMによる知識獲得：https://www.docswell.com/s/3465680103/ZJLP43-2024-01-22-142423, https://youtu.be/Oz8hED87qiQ
-- （改定）回帰、交差検定、LLMによるソースコード作成：https://www.docswell.com/s/3465680103/Z4Q1VD-2024-01-22-142634, https://youtu.be/3e698MCBlng
+- （改定）回帰、交差検定、LLMによるソースコード作成：https://www.docswell.com/s/3465680103/Z4Q1VD-2024-01-22-142634, https://youtu.be/PgV0ZMqJWTI
 - （改定）次元圧縮、分類、クラスタリング、LLMによるソースコード作成：https://www.docswell.com/s/3465680103/5M1P7W-2024-01-22-142812, https://youtu.be/Poubb2yzdZU
 
 ### 応用編
