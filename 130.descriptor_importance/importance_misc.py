@@ -30,6 +30,7 @@ def plot_importance(df, x, y, sortkey=None, yscale="log",
     ax.set_xlabel(ax.get_xlabel(), fontsize=labelfontsize)
     ax.legend(fontsize=legendfontsize)
     fig.tight_layout()
+    plt.show()
 
 
 def show_r2_decrease(df, comment: str = "perm_importance_boxplot", metadata: dict = None,
@@ -56,3 +57,5 @@ def show_r2_decrease(df, comment: str = "perm_importance_boxplot", metadata: dic
         filename = "_".join([metadata["prefix"], metadata["dataname"], metadata["regtype"], comment])+".pdf"
         print(filename)
         fig.savefig(os.path.join(metadata["outputdir"], filename))
+    plt.show()
+    

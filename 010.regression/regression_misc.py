@@ -57,6 +57,7 @@ def plot_alpha_yerror(
     ax.tick_params(axis="x", labelsize=tickfontsize)
     ax.tick_params(axis="y", labelsize=tickfontsize)
     fig.tight_layout()
+    plt.show()
 
 
 def plot_y_yp(y, yp, title: str = None, tickfontsize=15, labelfontsize=15):
@@ -94,7 +95,7 @@ def plot_y_yp(y, yp, title: str = None, tickfontsize=15, labelfontsize=15):
     ax.tick_params(axis="x", labelsize=tickfontsize)
     ax.tick_params(axis="y", labelsize=tickfontsize)
     fig.tight_layout()
-
+    plt.show()
 
 def plot_x1_y(X, y, yp, Xnew, ynew, ynewp):
     """plot x1 vs y
@@ -116,3 +117,4 @@ def plot_x1_y(X, y, yp, Xnew, ynew, ynewp):
     ax.set_xlabel("x1")
     ax.set_ylabel("y")
     fig.tight_layout()
+    plt.show()

@@ -37,6 +37,7 @@ def scatterplot_rd(X_rd: np.ndarray, nnatom_str_list: np.ndarray, X_rd_all: np.n
     ax.tick_params(axis = 'x', labelsize =tickfontsize)
     ax.tick_params(axis = 'y', labelsize =tickfontsize)
     fig.tight_layout()
+    plt.show()
 
 def plot_expratio(indx, explained_variance_ratio, esum):
     """plot explained variance ratio.
@@ -52,3 +53,4 @@ def plot_expratio(indx, explained_variance_ratio, esum):
     ax.plot(indx, esum, "o-",
             label="sum(explained_variance_ratio)")
     ax.legend()
+    plt.show()

@@ -43,6 +43,7 @@ def plot_each_DOS(df, logdos_names,  target_name, figsize=(8,5), n1=4, n2=3, fil
     fig.tight_layout()
     if filename is not None:
         fig.savefig(filename)
+    plt.show()
 
 def plot_X2_compare(X2, y, yp, figsize=(6,3), alpha=0.3, fontsize=10,
                     filename: str=None):
@@ -79,6 +80,7 @@ def plot_X2_compare(X2, y, yp, figsize=(6,3), alpha=0.3, fontsize=10,
     if filename is not None:
         print(filename)
         fig.savefig(filename)
+    plt.show()
 
 def assign_frequent_value(y, yp):
     """assign the most frequent value to yp
@@ -188,6 +190,8 @@ def add_convolution_variables(df, descriptor_names, n_new, alpha=None, metadata=
         print(filename)
         fig.savefig(os.path.join(metadata["outputdir"], filename))
 
+    plt.show()
+    
     smeared_names = []
     for i in range(n_new):
         smeared_names.append("smeared_dos{}".format(i))

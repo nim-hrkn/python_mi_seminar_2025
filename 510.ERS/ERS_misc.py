@@ -180,7 +180,7 @@ def plot_final_decisions(candidates, final_decisions):
     plt.xlim(xmin=0, xmax=1)
     plt.style.use('default')
     plt.tick_params(axis='y', which='major', labelsize=20)
-
+    plt.show()
 
 def plot_similarity_matrix(df_similarity, elements):
     """plot similarity matrix.
@@ -204,3 +204,5 @@ def plot_similarity_matrix(df_similarity, elements):
     cbar.ax.set_title("Similarity score")
     plt.xticks(rotation=45, horizontalalignment="right", fontsize=12)
     plt.yticks(horizontalalignment="right", fontsize=12)
+    plt.show()
+    

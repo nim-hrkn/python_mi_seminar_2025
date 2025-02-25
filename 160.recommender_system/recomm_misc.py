@@ -28,7 +28,7 @@ def plot_df_diff(df_orig: pd.DataFrame, df_recom: pd.DataFrame, threshold: float
     ax.xaxis.set_visible(False)
     sns.heatmap(df_recom.values-df_orig.values > threshold, ax=ax)
     ax.set_title("difference")
-
+    plt.show()
 
 def plot_df_heatmap(df, metadata=None, dpi=600):
     """plot headmap of df data
@@ -47,7 +47,7 @@ def plot_df_heatmap(df, metadata=None, dpi=600):
         filename = "_".join([metadata["prefix"], metadata["dataname"], "original_heatmap"])+".png"
         print(filename)
         fig.savefig(os.path.join(metadata["outputdir"], filename))
-
+    plt.show()
 
 def plot_2df(df, df_transform, nrank, threshold, title_fontsize=30, figsize_factor=1.8, dpi=100, metadata=None):
     """plot the original data and reconstructed data
@@ -81,7 +81,7 @@ def plot_2df(df, df_transform, nrank, threshold, title_fontsize=30, figsize_fact
         fig.savefig(os.path.join(metadata["outputdir"], filename))
 
     # fig.show()
-
+    plt.show()
 
 def plot_svd_sdiag(X):
     """寄与率の図示を行う．
@@ -117,3 +117,5 @@ def plot_svd_sdiag(X):
     ax.legend()
     fig.tight_layout()
     # fig.show()
+    plt.show()
+    

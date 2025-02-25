@@ -34,7 +34,7 @@ def plot_X_withlabel(X_PCA, X_new_PCA, ans_list,
     fig.tight_layout()
     if filename is not None:
         fig.savefig(filename)
-
+    plt.show()
 
 def plot_X_clusters(X_PCA, yp_km, alpha=0.1, tickfontsize=15, legendfontsize=15, filename=None):
     """plot X clusters
@@ -73,7 +73,7 @@ def plot_X_clusters(X_PCA, yp_km, alpha=0.1, tickfontsize=15, legendfontsize=15,
     fig.tight_layout()
     if filename is not None:
         fig.savefig(filename)
-
+    plt.show()
 
 def plot_X2_ystring(X_PCA, yp_km, ans_list,  X_new=None, alpha=0.01, figsize=(6, 4),
                     comment=None, metadata=None):
@@ -126,6 +126,7 @@ def plot_X2_ystring(X_PCA, yp_km, ans_list,  X_new=None, alpha=0.01, figsize=(6,
         filename = "_".join([metadata["prefix"], comment])+".png"
         print(filename)
         plt.savefig(os.path.join(metadata["outputdir"], filename))
+    plt.show()
 
 
 def plot_X2_ystring_new(X_PCA, yp_km, ans_list, X_new_PCA=None, yp_km_new=None, figsize=(5, 9)):
@@ -189,6 +190,7 @@ def plot_X2_ystring_new(X_PCA, yp_km, ans_list, X_new_PCA=None, yp_km_new=None, 
             ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
 
     fig.tight_layout()
+    plt.show()
 
 
 def plot_X2_new(X_PCA, yp_km, X_new_PCA=None, yp_km_new=None, figsize=(5, 9)):
@@ -234,7 +236,7 @@ def plot_X2_new(X_PCA, yp_km, X_new_PCA=None, yp_km_new=None, figsize=(5, 9)):
             ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
 
     fig.tight_layout()
-
+    plt.show()
 
 
 def make_df_sample(df, descriptor_names, n, group_name="nnatom_str", random_state=3):

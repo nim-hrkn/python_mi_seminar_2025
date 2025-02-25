@@ -31,6 +31,7 @@ def plot_index_r2(df_result, y, yerr, xlabel, ylabel, labelfontsize=15,
     ax.tick_params(axis='y', labelsize=tickfontsize)
     ax.legend(fontsize=legendfontsize)
     fig.tight_layout()
+    plt.show()
 
 
 def plot_importance(df, x, y, sortkey=None, yscale="log",
@@ -59,10 +60,11 @@ def plot_importance(df, x, y, sortkey=None, yscale="log",
     ax.set_xlabel(ax.get_xlabel(), fontsize=labelfontsize)
     ax.legend(fontsize=legendfontsize)
     fig.tight_layout()
-
+    plt.show()
 
 def plot_r2_hist(df, xlim=None, bins=100, tickfontsize=15, labelfontsize=15, figsize=(10, 5)):
     """R2のDOSを図示する．
+    plt.show()を実行しない。
 
     Args:
         df (pd.DataFrame): データ
@@ -137,7 +139,7 @@ def plot_weight_diagram(df_result, descriptor_names, ax=None, nmax=200, figsize=
     ax.set_ylim((-0.5, df_weight_diagram.shape[1]+0.5))
     if ax_orig is None:
         fig.tight_layout()
-
+    plt.show()
 
 def make_counts(df_result, descriptor_names, sentense, ratio=False):
     """
@@ -188,6 +190,7 @@ def make_and_plot_block_weight_list(df_result, descriptor_names, querylist, figs
     sns.heatmap(dfq.T, ax=ax)  # 前の図に合わせるためにtransposeする．
     ax.set_xticklabels(ax.get_xticklabels(), ha='right', rotation=45)
     fig.tight_layout()
+    plt.show()
 
     return dfq
 
@@ -305,6 +308,7 @@ def plot_df_imp_by_index(df_imp_by_index, descriptor_names, regions, regionsize,
     ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=legendfontsize)
     ax.set_ylabel("occurrence", fontsize=labelfontsize)
     fig.tight_layout()
+    plt.show()
 
 
 def plot_weight_diagram3d(df, descriptor_names, index=(0, 100), elev=30, azim=160, rotation=-90, figsize=(10, 10)):
@@ -342,10 +346,9 @@ def plot_weight_diagram3d(df, descriptor_names, index=(0, 100), elev=30, azim=16
     ax.set_yticks(np.arange(len(descriptor_names)))
     ax.set_yticklabels(descriptor_names, rotation=rotation)
     ax.view_init(elev=elev, azim=azim)
-
+    plt.show()
 
 import os
-
 
 def make_combination_stacked_bar(df, target="score_mean", column_names=("C_R", "C_T", "vol_per_atom"),
                                  action=("occurrence", "fraction"), nbins=50, figsize=(10, 5), 
@@ -403,6 +406,7 @@ def make_combination_stacked_bar(df, target="score_mean", column_names=("C_R", "
             img_filename = os.path.join(output_dir, f"combination_stacked_bar_occurrence.{img_format}")
             fig.savefig(img_filename)
             print(img_filename,"is made.")
+        plt.show()
 
     sum_values = df_bar.T.apply(lambda x: np.sum(x)).values
     df_stacked_bar = df_bar / sum_values.reshape(-1, 1)
@@ -417,3 +421,4 @@ def make_combination_stacked_bar(df, target="score_mean", column_names=("C_R", "
             img_filename = os.path.join(output_dir, f"combination_stacked_bar_fraction.{img_format}")
             fig.savefig(img_filename)
             print(img_filename,"is made.")
+        plt.show()

@@ -35,3 +35,4 @@ def plot_atomicprop(df, df_select, xlabel, ylabel, materialkey="index",
         ax.tick_params(axis = 'x', labelsize =tickfontsize)
         ax.tick_params(axis = 'y', labelsize =tickfontsize)   
     fig.tight_layout()
+    plt.show()
