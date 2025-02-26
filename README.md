@@ -15,14 +15,13 @@ scipy 1.9.3, pytorch 2.4.0で動作確認をしています。
 
 ### 想定受講者
 
-- Pythonは知っているが、これからPython/scikit-learnを用いて機械学習手法を適用したい方。
-- 大規模言語モデルを用いてscikit-learnや可視化のPythonコードの書き方を知りたい方。
+- Pythonは知っているが、これからPython/scikit-learn/PyTorchを用いて機械学習手法を適用したい方。
+- 大規模言語モデルを用いてscikit-learn,PyTorchや可視化のPythonコードの書き方を知りたい方。
 
 「スライド及び動画」節で示しているスライドを見て受講を決めてください。
 
 
 ### 想定外
-
 
 - Pythonを使わずにGUIソフトを使いたい人 → Orange Data Miningを用いた連続セミナー（下で紹介）。
 
@@ -32,8 +31,7 @@ scipy 1.9.3, pytorch 2.4.0で動作確認をしています。
 
 ２０２２年度、２０２３年度マテリアルズ・インフォマティクス連続セミナーを一部改定して作成しています。
 そのため一部スライドの年号や回数が修正されておりません。
-また、呼び方が「連続セミナー」、「チュートリアル」,
-「ハンズオン」と混乱しています。ご了承ください。
+また、呼び方が「連続セミナー」、「チュートリアル」,「ハンズオン」と混乱しています。ご了承ください。
 
 ### 座学編
 
@@ -51,6 +49,8 @@ scipy 1.9.3, pytorch 2.4.0で動作確認をしています。
 - 最低限のPython package紹介,データ紹介,LLMによる知識獲得：https://www.docswell.com/s/3465680103/ZJLP43-2024-01-22-142423, https://youtu.be/Oz8hED87qiQ
 - 回帰、交差検定、LLMによるソースコード作成：https://www.docswell.com/s/3465680103/Z4Q1VD-2024-01-22-142634, https://youtu.be/PgV0ZMqJWTI
 - 次元圧縮、分類、クラスタリング、LLMによるソースコード作成：https://www.docswell.com/s/3465680103/5M1P7W-2024-01-22-142812, https://youtu.be/Poubb2yzdZU
+- (追加)LLMによるニューラルネットワークモデル手法の学習：（正）https://mat-dacs.dxmt.mext.go.jp/a104743,
+（副）https://www.docswell.com/s/3465680103/KP2XYG-2025-02-25-203000, https://youtu.be/Ln5y8Hjzexg
 
 ### 応用編
 
@@ -59,12 +59,12 @@ scipy 1.9.3, pytorch 2.4.0で動作確認をしています。
 
 目的：基礎編の知識を元に機械学習手法のより高度な使い方を知る。
 
-
 - 次元圧縮を併用したクラスタリング、トモグラフ像の復元
 https://www.docswell.com/s/3465680103/K3R1V5-2023-01-09-214658, https://youtu.be/4CEa3mb1vug
 - 説明変数重要性、全探索を用いた説明変数重要性：https://www.docswell.com/s/3465680103/ZMJJ9Z-2023-01-16-123943, https://youtu.be/afg_2sIG3O8
 - ベイズ最適化、推薦システム：https://www.docswell.com/s/3465680103/5YY1D5-2023-01-23-142130, https://youtu.be/bE-kfA_Z3z0
-- (追加)LLMによるニューラルネットワークモデルの基礎：https://www.docswell.com/s/3465680103/KP2XYG-2025-02-25-203000, https://youtu.be/Ln5y8Hjzexg
+
+
 
 ## 実行環境の構築と実行
 
@@ -112,10 +112,10 @@ https://bitbucket.org/kino_h/orange_mi_seminar_2023/src/main/
 
 # 参考書籍
 
-- 「Pythonではじめるマテリアルズインフォマティクス」
-木野 日織，ダム ヒョウ チ（著）近代科学社Digital、ISBN:9784764960466
+- 「改訂版 Pythonではじめるマテリアルズインフォマティクス ChatGPTを活用しよう」
+木野 日織，ダム ヒョウ チ（著）[近代科学社Digital、ISBN:9784764960466](https://www.kindaikagaku.co.jp/book_list/detail/9784764961005/)
 
-- 「Orange Data Mining ではじめるマテリアルズインフォマティクス」⽊野 ⽇織、ダム ヒョウ チ(著) 近代科学社、ISBN:9784764906310
+- 「Orange Data Mining ではじめるマテリアルズインフォマティクス」⽊野 ⽇織、ダム ヒョウ チ(著) [近代科学社、ISBN:9784764906310](https://www.kindaikagaku.co.jp/book_list/detail/9784764906310/)
 
 
 # 免責事項
@@ -123,6 +123,6 @@ https://bitbucket.org/kino_h/orange_mi_seminar_2023/src/main/
 
 # LICENSE
 
-Copyright (c) 2022-2023 Hiori Kino<br>
+Copyright (c) 2022-2024 Hiori Kino<br>
 Released under the MIT license<br>
 https://opensource.org/licenses/mit-license.php
