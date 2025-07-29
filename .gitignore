@@ -52,4 +52,6 @@ Thumbs.db
 *.wmv
 
 
-junk/
+**/junk/
+**/__pycache__/
+**/tmp/
