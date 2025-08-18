@@ -141,6 +141,42 @@ def plot_weight_diagram(df_result, descriptor_names, ax=None, nmax=200, figsize=
         fig.tight_layout()
     plt.show()
 
+def plot_weight_diagram(df_result, descriptor_names, ax=None, nmax=200, figsize=(10, 5), floor=-3):
+    """weight diagramの表示とデータフレーム出力を行う。"""
+    ax_orig = ax
+
+    # 0..nmax-1 のほうが自然だが、元の意図を尊重して loc[:nmax] を踏襲
+    x = df_result.loc[:nmax, descriptor_names].to_numpy(copy=False)
+
+    # 先に絶対値を取る
+    a = np.abs(x)
+
+    # 0 を floor に落とすためのマスク
+    is_zero = (a == 0)
+
+    # log 計算時の divide/invalid を抑止
+    with np.errstate(divide='ignore', invalid='ignore'):
+        x_log = np.log10(a)
+
+    # 非有限（±inf, NaN）を floor へ、明示的に 0 も floor へ
+    x_log = np.where(np.isfinite(x_log), x_log, floor)
+    x_log = np.where(is_zero, floor, x_log)
+
+    # DataFrame 化
+    df_weight_diagram = pd.DataFrame(x_log, columns=descriptor_names)
+
+    if ax_orig is None:
+        fig, ax = plt.subplots(figsize=figsize)
+
+    # 以前と同様：転置してヒートマップ表示、y の範囲調整
+    import seaborn as sns
+    sns.heatmap(df_weight_diagram.T, ax=ax, vmin=floor)
+    ax.set_ylim((-0.5, df_weight_diagram.shape[1] + 0.5))
+    if ax_orig is None:
+        fig.tight_layout()
+    plt.show()
+
+
 def make_counts(df_result, descriptor_names, sentense, ratio=False):
     """
     説明変数が用いられた回数を計算する．
@@ -162,6 +198,25 @@ def make_counts(df_result, descriptor_names, sentense, ratio=False):
     print(sentense, "#=", dfq.shape[0])
     if ratio:
         return np.sum(dfq[descriptor_names], axis=0)/dfq.shape[0]
+    else:
+        return np.sum(dfq[descriptor_names], axis=0)
+
+def make_counts(df_result, descriptor_names, sentense, ratio=False):
+    """
+    説明変数が用いられた回数を計算する．
+    """
+    # 係数が0でない → その説明変数を使ったモデル（bool 配列）
+    x_bool = (df_result[descriptor_names].values != 0)
+
+    # 既存列が float64 なので、互換の float に明示変換してから代入
+    df_indicator_diagram = df_result.copy()
+    df_indicator_diagram.loc[:, descriptor_names] = x_bool.astype(float)
+
+    dfq = df_indicator_diagram.query(sentense)
+    print(sentense, "#=", dfq.shape[0])
+    if ratio:
+        # 0/1 の float でも bool でも sum はそのまま回数になる
+        return np.sum(dfq[descriptor_names], axis=0) / dfq.shape[0]
     else:
         return np.sum(dfq[descriptor_names], axis=0)
 
